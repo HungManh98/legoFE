@@ -5,7 +5,9 @@ import FixedHeader from "../components/FixedHeader";
 const Login = () => {
   return (
     <div>
-      <FixedHeader />
+      <div className="sticky">
+        <FixedHeader />
+      </div>{" "}
       <LoginForm />
     </div>
   );

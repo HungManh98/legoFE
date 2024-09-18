@@ -7,7 +7,9 @@ const CSHoanTra = () => {
   return (
     <div>
       <Header />
-      <FixedHeader />
+      <div className="sticky">
+        <FixedHeader />
+      </div>{" "}
       <div className="chinhSach">
         <h3>Chính sách thanh toán</h3>
         <br />

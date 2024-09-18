@@ -1,17 +1,18 @@
-import React from 'react'
-import FixedHeader from '../components/FixedHeader'
-import Footer from '../components/Footer'
-import ShowProfile from '../components/ShowProfile'
+import React from "react";
+import FixedHeader from "../components/FixedHeader";
+import Footer from "../components/Footer";
+import ShowProfile from "../components/ShowProfile";
 
 const Profile = () => {
   return (
     <div>
+      <div className="sticky">
         <FixedHeader />
-        <ShowProfile />
-
-        <Footer />
+      </div>{" "}
+      <ShowProfile />
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default Profile
+export default Profile;

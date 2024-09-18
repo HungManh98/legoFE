@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { AppContext } from "../App";
 import { RiVerifiedBadgeLine } from "react-icons/ri";
 import { RiRefund2Fill } from "react-icons/ri";
@@ -10,25 +10,21 @@ import "react-toastify/dist/ReactToastify.css";
 const ShowDetailProduct = () => {
   const [data, setData] = useState({});
   const [price, setPrice] = useState("");
-
   const [message, setMessage] = useState("");
   const [actionText, setActionText] = useState("Mua hàng");
-  const [actionLink, setActionLink] = useState("/");
 
   const { products } = useContext(AppContext);
-  // console.log("🚀 ~ ShowDetailProduct ~ products:", products);
-
   const { id } = useParams();
-  // console.log(id);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const product = products.find((product) => {
       return product.id.toString() === id;
     });
-    // console.log("🚀 ~ useEffect ~ product:", product);
     setData(product);
     setPrice(product.price);
-  });
+  }, [id, products]);
+
   const formattedPrice = price.toLocaleString("vi-VN", {
     style: "currency",
     currency: "VND",
@@ -39,12 +35,9 @@ const ShowDetailProduct = () => {
     const user = localStorage.getItem("loggedInUser");
 
     if (!user) {
-      // Người dùng chưa đăng nhập
       setMessage("Bạn cần đăng nhập trước để thêm sản phẩm vào giỏ hàng.");
       setActionText("Đến trang đăng nhập");
-      setActionLink("/login");
     } else {
-      // Người dùng đã đăng nhập
       const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
       cartItems.push(data);
       localStorage.setItem("cart", JSON.stringify(cartItems));
@@ -52,13 +45,16 @@ const ShowDetailProduct = () => {
 
       setMessage("Sản phẩm đã được thêm vào giỏ hàng thành công!");
       setActionText("Tiếp tục mua hàng");
-      setActionLink("/");
     }
   };
 
   const handleAction = () => {
-    window.location.href = actionLink; // Điều hướng đến trang dựa trên actionLink
-};
+    if (actionText === "Đến trang đăng nhập") {
+      navigate("/login"); 
+    } else if (actionText === "Tiếp tục mua hàng") {
+      navigate("/"); 
+    }
+  };
 
   return (
     <div id="showDetail">

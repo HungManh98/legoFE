@@ -7,7 +7,9 @@ const CSBaoMat = () => {
   return (
     <div>
       <Header />
-      <FixedHeader />
+      <div className="sticky">
+        <FixedHeader />
+      </div>{" "}
       <div className="chinhSach">
         <h3>Chính sách bảo mật</h3>
         <p>
@@ -29,14 +31,14 @@ const CSBaoMat = () => {
           <strong>II. Phạm vi sử dụng thông tin:</strong>
         </p>
         <p>
-          - thuytienmart, TGTT, Ngân hàng, HPAY có thể thu thập và sử dụng thông tin cá
-          nhân quý khách với mục đích phù hợp và hoàn toàn tuân thủ nội dung của
-          “Chính sách bảo mật” này. <br /> 
-          - Khi cần thiết, chúng tôi có thể sử dụng những thông tin này để liên hệ trực tiếp với bạn dưới các hình thức
-          như: gởi thư ngỏ, đơn đặt hàng, thư cảm ơn, thông tin về kỹ thuật và
-          bảo mật, quý khách có thể nhận được thư định kỳ cung cấp thông tin sản
-          phẩm, dịch vụ mới, thông tin về các sự kiện sắp tới hoặc thông tin
-          tuyển dụng nếu quý khách đăng kí nhận email thông báo.
+          - thuytienmart, TGTT, Ngân hàng, HPAY có thể thu thập và sử dụng thông
+          tin cá nhân quý khách với mục đích phù hợp và hoàn toàn tuân thủ nội
+          dung của “Chính sách bảo mật” này. <br />- Khi cần thiết, chúng tôi có
+          thể sử dụng những thông tin này để liên hệ trực tiếp với bạn dưới các
+          hình thức như: gởi thư ngỏ, đơn đặt hàng, thư cảm ơn, thông tin về kỹ
+          thuật và bảo mật, quý khách có thể nhận được thư định kỳ cung cấp
+          thông tin sản phẩm, dịch vụ mới, thông tin về các sự kiện sắp tới hoặc
+          thông tin tuyển dụng nếu quý khách đăng kí nhận email thông báo.
         </p>
         <br />
         <p>
