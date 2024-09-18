@@ -1,31 +1,38 @@
 import { Input } from "antd";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { HiShoppingCart } from "react-icons/hi";
 import { IoPersonSharp } from "react-icons/io5";
 import { NavLink, useNavigate } from "react-router-dom";
-import { Dropdown, Menu } from "antd";
+import { Dropdown } from "antd";
 import "antd/dist/reset.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { AppContext } from "../App";
 
-const FixedHeader = () => {
+const FixedHeader = ({ setSelectedCategory }) => {
+  // Sử dụng useContext để lấy products từ AppContext
+  const { products } = useContext(AppContext); // Lấy products từ context
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [selectedIndex, setSelectedIndex] = useState(-1);
   const navigate = useNavigate();
-
   const [loggedInUser, setLoggedInUser] = useState(null);
 
   useEffect(() => {
-    // Kiểm tra xem người dùng đã đăng nhập chưa
     const storedUser = JSON.parse(localStorage.getItem("loggedInUser"));
     if (storedUser) {
       setLoggedInUser(storedUser);
     }
   }, []);
 
-  const handleLogout = () => {
-    localStorage.removeItem("loggedInUser"); // Xóa thông tin người dùng khỏi localStorage
-    setLoggedInUser(null); // Cập nhật trạng thái
+  const handleLogout = async () => {
+    localStorage.removeItem("loggedInUser");
+    setLoggedInUser(null);
     toast.success("Bạn vừa đăng xuất!");
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    navigate("/")
   };
 
   const menuItems = [
@@ -41,6 +48,44 @@ const FixedHeader = () => {
     },
   ];
 
+  const handleSearch = (e) => {
+    const value = e.target.value;
+    setSearchTerm(value);
+
+    if (value) {
+      // Lọc sản phẩm dựa trên tên gần đúng
+      const filtered = products.filter((product) =>
+        product.name.toLowerCase().includes(value.toLowerCase())
+      );
+      setFilteredProducts(filtered);
+      setSelectedIndex(-1); // Reset lại chỉ mục
+    } else {
+      setFilteredProducts([]);
+    }
+  };
+
+  const handleSelectProduct = (product) => {
+    setSearchTerm(product.name);
+    setFilteredProducts([]);
+    navigate(`/${product.id}`);
+  };
+
+  // Xử lý sự kiện bàn phím (lên/xuống và Enter)
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowDown") {
+      // Di chuyển xuống danh sách
+      setSelectedIndex((prevIndex) =>
+        Math.min(prevIndex + 1, filteredProducts.length - 1)
+      );
+    } else if (e.key === "ArrowUp") {
+      // Di chuyển lên danh sách
+      setSelectedIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    } else if (e.key === "Enter" && selectedIndex >= 0) {
+      // Chọn sản phẩm khi nhấn Enter
+      handleSelectProduct(filteredProducts[selectedIndex]);
+    }
+  };
+
   return (
     <div>
       <div className="stickyHeader">
@@ -53,18 +98,48 @@ const FixedHeader = () => {
             </NavLink>
           </div>
           <div className="searchHeader">
-            <Input placeholder="Tìm kiếm sản phẩm" id="search" />
+            <Input
+              id="search"
+              type="text"
+              value={searchTerm}
+              onChange={handleSearch}
+              onKeyDown={handleKeyDown}
+              placeholder="Tìm sản phẩm..."
+            />
+            <ul className="dropdown">
+              {searchTerm ? (
+                filteredProducts.length > 0 ? (
+                  filteredProducts.map((product, index) => (
+                    <li
+                      key={product.id}
+                      className={index === selectedIndex ? "selected" : ""}
+                      onClick={() => handleSelectProduct(product)}
+                    >
+                      <img
+                        src={product.img}
+                        alt={product.name}
+                        className="product-image"
+                      />
+                      {product.name}
+                    </li>
+                  ))
+                ) : (
+                  <li>Không có sản phẩm tương ứng</li>
+                )
+              ) : null}
+            </ul>
             <div className="tag">
-              <a href="">Yến</a>
-              <a href="">Rượu</a>
-              <a href="">Chocolate</a>
-              <a href="">Bia</a>
-              <a href="">Sốt</a>
-              <a href="">Nấm</a>
-              <a href="">Quạt</a>
-              <a href="">Cân</a>
-              <a href="">Nồi</a>
-              <a href="">Lồng đèn</a>
+              <a onClick={() => setSelectedCategory("Yến")}>Yến</a>
+              <a onClick={() => setSelectedCategory("Rượu")}>Rượu</a>
+              <a onClick={() => setSelectedCategory("Chocolate")}>Chocolate</a>
+              <a onClick={() => setSelectedCategory("Bia")}>Bia</a>
+              <a onClick={() => setSelectedCategory("Sốt")}>Sốt</a>
+              <a onClick={() => setSelectedCategory("Nấm")}>Nấm</a>
+              <a onClick={() => setSelectedCategory("Quạt")}>Quạt</a>
+              <a onClick={() => setSelectedCategory("Cân")}>Cân</a>
+              <a onClick={() => setSelectedCategory("Nồi")}>Nồi</a>
+              <a onClick={() => setSelectedCategory("Lồng đèn")}>Lồng đèn</a>
+              <a onClick={() => setSelectedCategory(null)}>Tất cả</a>
             </div>
           </div>
           <div className="toolMember">

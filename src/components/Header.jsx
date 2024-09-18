@@ -26,11 +26,10 @@ const Header = () => {
         <div className="address">
           <a
             target="_blank"
-            href="https://www.google.com/maps/place/56+%C4%90.+Ph%C3%BA+Th%E1%BB%8D,+P.+Ph%C3%BA+S%C6%A1n,+Th%C3%A0nh+ph%E1%BB%91+Thanh+H%C3%B3a,+Thanh+Ho%C3%A1/@19.8094494,105.7631451,17z/data=!3m1!4b1!4m6!3m5!1s0x3136f81e152841dd:0xff5684eafafdfd35!8m2!3d19.8094494!4d105.7631451!16s%2Fg%2F11g0tc681d?entry=ttu"
+            href="https://www.google.com/maps/place/136+Ph%E1%BA%A1m+V%E1%BA%A5n,+P.+Ng%E1%BB%8Dc+Trang,+Th%C3%A0nh+ph%E1%BB%91+Thanh+H%C3%B3a,+Thanh+Ho%C3%A1/@19.7966963,105.7825172,17z/data=!3m1!4b1!4m5!3m4!1s0x313657e2af63f63f:0x8082d85ee74520ce!8m2!3d19.7966963!4d105.7825172?entry=ttu&g_ep=EgoyMDI0MDkxNS4wIKXMDSoASAFQAw%3D%3D"
           >
             <IoLocationSharp size={20} />
-            56 Phú Thọ 3, Phường Phú Sơn, Thành phố Thanh Hóa, Tỉnh Thanh Hóa,
-            Việt Nam
+            136 Phạm Vấn, Phường Đông Vệ, Thành phố Thanh Hóa, Việt Nam
           </a>
         </div>
       </div>

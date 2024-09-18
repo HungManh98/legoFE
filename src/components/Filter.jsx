@@ -6,21 +6,30 @@ const { Meta } = Card;
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { AppContext } from "../App";
 
-
-
-const Filter = () => {
+const Filter = ({ selectedCategory }) => {
   const { products } = useContext(AppContext);
-  console.log("🚀 ~ Filter ~ products:", products)
 
-  const doUong = products.filter((product) => product.category === "đồ uống");
-  const banhKeo = products.filter((product) => product.category === "bánh kẹo");
-  const thucPhamBoDuong = products.filter(
+  // Ensure productsFilter is a valid array
+  const productsFilter = Array.isArray(products) ? products : [];
+
+  const filteredProductsFromHead = selectedCategory
+    ? productsFilter.filter((product) =>
+        product.name.toLowerCase().includes(selectedCategory.toLowerCase())
+      )
+    : [];
+
+  const doUong = productsFilter.filter(
+    (product) => product.category === "đồ uống"
+  );
+  const banhKeo = productsFilter.filter(
+    (product) => product.category === "bánh kẹo"
+  );
+  const thucPhamBoDuong = productsFilter.filter(
     (product) => product.category === "thực phẩm bổ dưỡng"
   );
-  const doGiadung = products.filter(
+  const doGiadung = productsFilter.filter(
     (product) => product.category === "đồ gia dụng"
   );
-
 
   const [isDropdownOpen, setIsDropdownOpen] = useState({
     price: false,
@@ -61,7 +70,7 @@ const Filter = () => {
   };
 
   const getFilteredProducts = () => {
-    return products
+    return productsFilter
       .filter((product) => {
         const { price, category, rating } = selectedFilters;
         return (
@@ -123,6 +132,29 @@ const Filter = () => {
 
   return (
     <div id="filter">
+      {filteredProductsFromHead.length > 0 && (
+        <div className="khungSanPham" id="khungDoUong">
+          <h3 className="tenKhung" id="ghTag">
+            * Có Phải Bạn Muốn Tìm *
+          </h3>
+          <div className="list">
+            {filteredProductsFromHead.map((product) => (
+              <div className="mapProduct" key={product.id}>
+                <NavLink to={`/${product.id}`}>
+                  <div id="item">
+                    <div className="img">
+                      <img id="Image" src={product.img} alt={product.name} />
+                    </div>
+                    <h4>{product.name}</h4>
+                    <div id="price">{product.price.toLocaleString()} VND</div>
+                  </div>
+                </NavLink>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div id="allSort">
         <div
           className="filter-button"
@@ -220,7 +252,7 @@ const Filter = () => {
         </div>
       </div>
 
-      {hasFilters ? (
+      {hasFilters && (
         <>
           <div className="filter-summary">
             <button id="deleteAllFil" onClick={clearAllFilters}>
@@ -241,14 +273,14 @@ const Filter = () => {
           </div>
           <div className="product-list">
             {filteredProducts.map((product) => (
-              <div className="mapProduct">
-                <NavLink to={`/${product.id}`} key={product.id}>
-                  <div key={product.id} id="item">
+              <div className="mapProduct" key={product.id}>
+                <NavLink to={`/${product.id}`}>
+                  <div id="item">
                     <div className="img">
                       <img id="Image" src={product.img} alt={product.name} />
                     </div>
                     <h4>{product.name}</h4>
-                    <div id="price">{product.price.toLocaleString()} VND </div>
+                    <div id="price">{product.price.toLocaleString()} VND</div>
                   </div>
                 </NavLink>
                 <div id="add">
@@ -258,7 +290,9 @@ const Filter = () => {
             ))}
           </div>
         </>
-      ) : (
+      )}
+
+      {!hasFilters && (
         <div className="container">
           <div className="Drink">
             <div className="khungSanPham" id="khungDoUong">
@@ -268,14 +302,12 @@ const Filter = () => {
               <div className="list">
                 {doUong.map((product) => (
                   <NavLink to={`/${product.id}`} key={product.id}>
-                    <div key={product.id} id="item">
+                    <div id="item">
                       <div className="img">
                         <img id="Image" src={product.img} alt={product.name} />
                       </div>
                       <h4>{product.name}</h4>
-                      <div id="price">
-                        {product.price.toLocaleString()} VND{" "}
-                      </div>
+                      <div id="price">{product.price.toLocaleString()} VND</div>
                     </div>
                   </NavLink>
                 ))}
@@ -293,14 +325,12 @@ const Filter = () => {
               <div className="list">
                 {banhKeo.map((product) => (
                   <NavLink to={`/${product.id}`} key={product.id}>
-                    <div key={product.id} id="item">
+                    <div id="item">
                       <div className="img">
                         <img id="Image" src={product.img} alt={product.name} />
                       </div>
                       <h4>{product.name}</h4>
-                      <div id="price">
-                        {product.price.toLocaleString()} VND{" "}
-                      </div>
+                      <div id="price">{product.price.toLocaleString()} VND</div>
                     </div>
                   </NavLink>
                 ))}
@@ -318,14 +348,12 @@ const Filter = () => {
               <div className="list">
                 {doGiadung.map((product) => (
                   <NavLink to={`/${product.id}`} key={product.id}>
-                    <div key={product.id} id="item">
+                    <div id="item">
                       <div className="img">
                         <img id="Image" src={product.img} alt={product.name} />
                       </div>
                       <h4>{product.name}</h4>
-                      <div id="price">
-                        {product.price.toLocaleString()} VND{" "}
-                      </div>
+                      <div id="price">{product.price.toLocaleString()} VND</div>
                     </div>
                   </NavLink>
                 ))}
@@ -343,14 +371,12 @@ const Filter = () => {
               <div className="list">
                 {thucPhamBoDuong.map((product) => (
                   <NavLink to={`/${product.id}`} key={product.id}>
-                    <div key={product.id} id="item">
+                    <div id="item">
                       <div className="img">
                         <img id="Image" src={product.img} alt={product.name} />
                       </div>
                       <h4>{product.name}</h4>
-                      <div id="price">
-                        {product.price.toLocaleString()} VND{" "}
-                      </div>
+                      <div id="price">{product.price.toLocaleString()} VND</div>
                     </div>
                   </NavLink>
                 ))}

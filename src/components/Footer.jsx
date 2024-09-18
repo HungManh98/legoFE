@@ -17,14 +17,14 @@ const Footer = () => {
           </div>
           <p>Hộ Kinh Doanh Đặng Hữu Công</p>
           <br />
-          <p>Mã số HKD : 26A8045420 </p>
-          <p>Do Phòng Tài Chính Kế Hoạch TP Thanh Hóa cấp ngày 7/11/2023</p>
+          <p>Mã số HKD : 26A8048722 </p>
+          <p>Do Phòng Tài Chính Kế Hoạch TP Thanh Hóa cấp ngày 25/06/2024</p>
         </div>
         <div className="footer2">
           <div>
             <CiLocationOn size={25} />
             <span>
-              56 Phú Thọ 3, Phường Phú Sơn, Thành Phố Thanh Hóa, Tỉnh Thanh Hóa
+            136 Phạm Vấn, Phường Đông Vệ, Thành phố Thanh Hóa, Việt Nam
             </span>
             <br />
             <br />
@@ -51,7 +51,7 @@ const Footer = () => {
           <br />
           <div>
             <BsFillTelephoneFill />
-            <span style={{ fontSize: "20px" }}> 0796866689</span>
+            <span style={{ fontSize: "20px" }}> 0796866688</span>
           </div>
           <p>Thứ 2 - Thứ 7: 8:00 - 21:30</p>
           <div id="mail">

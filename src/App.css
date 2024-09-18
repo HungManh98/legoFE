@@ -70,6 +70,57 @@ body {
   #search {
     font-size: 1em;
   }
+
+  /* Dropdown Container */
+  .dropdown {
+    position: absolute;
+    top: 20px;
+    background-color: white;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure it appears on top of other elements */
+    margin-top: 5px;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+    top: 30px;
+    width: 626px;
+  }
+
+  /* Dropdown Items */
+  .dropdown li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  /* Highlight Selected Item */
+  .dropdown li.selected,
+  .dropdown li:hover {
+    background-color: #f0f0f0;
+    width: 626px;
+  }
+
+  /* Product Image in Dropdown */
+  .product-image {
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+
+  /* No Products Found Message */
+  .dropdown li:not(.selected) {
+    color: #888;
+  }
+
   .flexSticky {
     display: flex;
     top: 0px;
@@ -107,6 +158,7 @@ body {
     text-decoration: none;
     font-size: 18px;
     color: #808080;
+    cursor: pointer;
   }
   .tag :hover {
     color: black;
@@ -305,6 +357,15 @@ body {
       #42bcf4 100%
     );
   }
+
+  #ghTag {
+    background-image: linear-gradient(
+      120deg,
+      #d942f4 0%,
+      #49003e 50%,
+      #f442eb 100%
+    );
+  }
   .seeALL button {
     border: none;
     width: 100%;
@@ -326,6 +387,10 @@ body {
   #khungBanhKeo {
     border-color: #ff9c00;
     border: 2px solid #ff4d00;
+  }
+  #khungTag {
+    border-color: #aa00ff;
+    border: 2px solid #aa00ff;
   }
   #dhBanKeo {
     background-image: linear-gradient(
@@ -405,6 +470,11 @@ body {
     position: absolute;
     right: 0xp;
     bottom: 0px;
+    border: none;
+    background-color: #fff;
+  }
+  #add:hover {
+    background-color: #f5f5f5;
   }
   /* end filter */
   /* footer */
@@ -552,7 +622,8 @@ body {
     margin: 20px 0px;
   }
   .cartImg {
-    width: 15%;
+    width: 400px;
+    height: auto;
   }
   .addToCart {
     width: 40%;
@@ -990,7 +1061,7 @@ body {
   #loginForm {
     width: 80%;
   }
-  #regis{
+  #regis {
     width: 80%;
   }
   .searchHeader {

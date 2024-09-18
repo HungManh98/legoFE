@@ -9,13 +9,23 @@ const ShowCart = () => {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
-    const updatedCart = storedCart.map((item) => ({
-      ...item,
-      quantity: item.quantity ?? 1,
-    }));
-    setCart(updatedCart);
-  }, []); 
+    const updateCart = () => {
+      const storedCart = JSON.parse(localStorage.getItem("cart")) || [];
+      const updatedCart = storedCart.map((item) => ({
+        ...item,
+        quantity: item.quantity ?? 1,
+      }));
+      setCart(updatedCart);
+    };
+  
+    updateCart();
+  
+    window.addEventListener('storage', updateCart);
+  
+    return () => {
+      window.removeEventListener('storage', updateCart);
+    };
+  }, []);
 
   const user = JSON.parse(localStorage.getItem("user"));
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
