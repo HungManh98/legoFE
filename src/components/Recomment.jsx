@@ -6,27 +6,22 @@ import { ToastContainer, toast } from "react-toastify";
 
 const Recomment = () => {
   const { products } = useContext(AppContext);
-  console.log("🚀 ~ Recomment ~ products:", products);
   const recommentProduct = products
     .sort(() => 0.5 - Math.random())
     .slice(0, 10);
-  console.log("🚀 ~ Recomment ~ recommentProduct:", recommentProduct);
 
   const addToCart = async (product) => {
-    // Kiểm tra xem người dùng đã đăng nhập hay chưa
     const isLoggedIn = JSON.parse(localStorage.getItem("loggedInUser"));
 
     if (!isLoggedIn) {
-      // Nếu chưa đăng nhập, hiển thị thông báo và chuyển đến trang đăng nhập
       toast.warn("Bạn cần đăng nhập trước!", {
         position: toast.TOP_CENTER,
         autoClose: 5000,
-        onClick: () => navigate("/login"), // Chuyển đến trang đăng nhập khi nhấn vào thông báo
+        onClick: () => navigate("/login"), 
       });
       return;
     }
 
-    // Nếu đã đăng nhập, thực hiện thêm sản phẩm vào giỏ hàng
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));

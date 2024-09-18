@@ -5,19 +5,17 @@ import Filter from "../components/Filter";
 import Footer from "../components/Footer";
 import ScrollTop from "../components/ScrollTop";
 import FixedHeader from "../components/FixedHeader";
-import { AppContext } from "../App";
 
 const Home = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
 
   return (
     <div>
       <Header />
-      <div id="sticky">
-        <FixedHeader setSelectedCategory={setSelectedCategory} />
+      <div className="sticky">
+        <FixedHeader/>
       </div>
       <Banner />
-      <Filter selectedCategory={selectedCategory} />
+      <Filter/>
       <Footer />
       <ScrollTop />
     </div>

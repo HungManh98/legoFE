@@ -12,7 +12,6 @@ const ShowProfile = () => {
   const [passwordStrength, setPasswordStrength] = useState("");
 
   useEffect(() => {
-    // Lấy thông tin người dùng từ localStorage
     const storedUser = JSON.parse(localStorage.getItem("user")) || {};
     setUser(storedUser);
     setNewUsername(storedUser.username || "");

@@ -29,7 +29,7 @@ const CSBaoMat = () => {
           <strong>II. Phạm vi sử dụng thông tin:</strong>
         </p>
         <p>
-          - Cheapmart, TGTT, Ngân hàng có thể thu thập và sử dụng thông tin cá
+          - thuytienmart, TGTT, Ngân hàng, HPAY có thể thu thập và sử dụng thông tin cá
           nhân quý khách với mục đích phù hợp và hoàn toàn tuân thủ nội dung của
           “Chính sách bảo mật” này. <br /> 
           - Khi cần thiết, chúng tôi có thể sử dụng những thông tin này để liên hệ trực tiếp với bạn dưới các hình thức

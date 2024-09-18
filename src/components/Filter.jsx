@@ -6,17 +6,10 @@ const { Meta } = Card;
 import { IoIosAddCircleOutline } from "react-icons/io";
 import { AppContext } from "../App";
 
-const Filter = ({ selectedCategory }) => {
+const Filter = () => {
   const { products } = useContext(AppContext);
 
-  // Ensure productsFilter is a valid array
   const productsFilter = Array.isArray(products) ? products : [];
-
-  const filteredProductsFromHead = selectedCategory
-    ? productsFilter.filter((product) =>
-        product.name.toLowerCase().includes(selectedCategory.toLowerCase())
-      )
-    : [];
 
   const doUong = productsFilter.filter(
     (product) => product.category === "đồ uống"
@@ -132,29 +125,6 @@ const Filter = ({ selectedCategory }) => {
 
   return (
     <div id="filter">
-      {filteredProductsFromHead.length > 0 && (
-        <div className="khungSanPham" id="khungDoUong">
-          <h3 className="tenKhung" id="ghTag">
-            * Có Phải Bạn Muốn Tìm *
-          </h3>
-          <div className="list">
-            {filteredProductsFromHead.map((product) => (
-              <div className="mapProduct" key={product.id}>
-                <NavLink to={`/${product.id}`}>
-                  <div id="item">
-                    <div className="img">
-                      <img id="Image" src={product.img} alt={product.name} />
-                    </div>
-                    <h4>{product.name}</h4>
-                    <div id="price">{product.price.toLocaleString()} VND</div>
-                  </div>
-                </NavLink>
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-
       <div id="allSort">
         <div
           className="filter-button"

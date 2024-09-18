@@ -11,7 +11,7 @@ const CSThanhToan = () => {
       <div className="chinhSach">
         <h3>Chính sách thanh toán</h3>
         <p>
-          Thuy Tien Mart áp dụng 3 hình thức thanh toán bao gồm: Thanh toán khi nhận
+          thuytienmart áp dụng 3 hình thức thanh toán bao gồm: Thanh toán khi nhận
           hàng (thanh toán COD), thanh toán trả trước chuyển khoản, thanh toán
           online
         </p>
@@ -47,7 +47,7 @@ const CSThanhToan = () => {
         <p>
           <strong>III. Thanh toán qua Thẻ Visa/Master/JCB</strong>
         </p>
-        <p>- Khách hàng có thể thanh toán qua cổng thanh toán</p>
+        <p>- Khách hàng có thể thanh toán qua payment link của đơn vị TTGT: HPAY</p>
         <br />
         <p>
           <strong>IV. Các trường hợp khác:</strong>

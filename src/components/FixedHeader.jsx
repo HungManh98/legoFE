@@ -10,8 +10,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { AppContext } from "../App";
 
-const FixedHeader = ({ setSelectedCategory }) => {
-  // Sử dụng useContext để lấy products từ AppContext
+const FixedHeader = () => {
   const { products } = useContext(AppContext); // Lấy products từ context
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -58,7 +57,7 @@ const FixedHeader = ({ setSelectedCategory }) => {
         product.name.toLowerCase().includes(value.toLowerCase())
       );
       setFilteredProducts(filtered);
-      setSelectedIndex(-1); // Reset lại chỉ mục
+      setSelectedIndex(-1); 
     } else {
       setFilteredProducts([]);
     }
@@ -93,8 +92,8 @@ const FixedHeader = ({ setSelectedCategory }) => {
           <div id="logo">
             <NavLink to="/">
               <AiOutlineShoppingCart size={60} />
-              <span id="cheap">ThuyTien</span>
-              <span>mart</span>
+              <span id="cheap">TT</span>
+              <span>MART</span>
             </NavLink>
           </div>
           <div className="searchHeader">
@@ -129,17 +128,16 @@ const FixedHeader = ({ setSelectedCategory }) => {
               ) : null}
             </ul>
             <div className="tag">
-              <a onClick={() => setSelectedCategory("Yến")}>Yến</a>
-              <a onClick={() => setSelectedCategory("Rượu")}>Rượu</a>
-              <a onClick={() => setSelectedCategory("Chocolate")}>Chocolate</a>
-              <a onClick={() => setSelectedCategory("Bia")}>Bia</a>
-              <a onClick={() => setSelectedCategory("Sốt")}>Sốt</a>
-              <a onClick={() => setSelectedCategory("Nấm")}>Nấm</a>
-              <a onClick={() => setSelectedCategory("Quạt")}>Quạt</a>
-              <a onClick={() => setSelectedCategory("Cân")}>Cân</a>
-              <a onClick={() => setSelectedCategory("Nồi")}>Nồi</a>
-              <a onClick={() => setSelectedCategory("Lồng đèn")}>Lồng đèn</a>
-              <a onClick={() => setSelectedCategory(null)}>Tất cả</a>
+              <NavLink to="/yen" >Yến</NavLink>
+              <NavLink to="/ruou" >Rượu</NavLink>
+              <NavLink to="/chocolate" >Chocolate</NavLink>
+              <NavLink to="/bia" >Bia</NavLink>
+              <NavLink to="/sot" >Sốt</NavLink>
+              <NavLink to="/nam" >Nấm</NavLink>
+              <NavLink to="/quat" >Quạt</NavLink>
+              <NavLink to="/can" >Cân</NavLink>
+              <NavLink to="/noi" >Nồi</NavLink>
+              <NavLink to="/long-den" >Lồng đèn</NavLink>
             </div>
           </div>
           <div className="toolMember">

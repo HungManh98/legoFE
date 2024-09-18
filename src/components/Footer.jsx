@@ -12,10 +12,11 @@ const Footer = () => {
         <div className="footer1">
           <div id="logo" style={{ color: "white", fontSize: "20px" }}>
             <AiOutlineShoppingCart size={60} />
-            <span id="cheap">cheap</span>
-            <span>mart</span>
+            <span id="cheap">TT</span>
+            <span>MART</span>
           </div>
-          <p>Hộ Kinh Doanh Đặng Hữu Công</p>
+          <br />
+          <p>Hộ Kinh Doanh Cửa Hàng Tiện Ích Thủy Tiên</p>
           <br />
           <p>Mã số HKD : 26A8048722 </p>
           <p>Do Phòng Tài Chính Kế Hoạch TP Thanh Hóa cấp ngày 25/06/2024</p>
@@ -24,9 +25,8 @@ const Footer = () => {
           <div>
             <CiLocationOn size={25} />
             <span>
-            136 Phạm Vấn, Phường Đông Vệ, Thành phố Thanh Hóa, Việt Nam
+              136 Phạm Vấn, Phường Đông Vệ, Thành phố Thanh Hóa, Việt Nam
             </span>
-            <br />
             <br />
             Thứ 2 - Chủ nhật: 6:00-20:00
           </div>
