@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  max-width: 2560px;
+  width: 100%;
+  margin: 0 auto;
+}
 
 @media (min-width: 768px) {
   .nonFixHeader {
@@ -62,7 +67,7 @@
     border-bottom: 2px solid #e1e1e1;
     background-color: white;
   }
-  #search{
+  #search {
     font-size: 1em;
   }
   .flexSticky {
@@ -260,11 +265,10 @@
     border-top: 2px solid #808080;
     padding-top: 20px;
     display: grid;
-    grid-template-columns: repeat(5, 1fr); 
-    grid-template-rows: repeat(2, auto);  
-    gap: 10px; 
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
     padding: 10px;
-
   }
   .product-item {
     padding: 10px;
@@ -307,7 +311,6 @@
     display: block;
     font-weight: bold;
     text-align: center;
-    /* max-width: 25%; */
     margin: 0 auto;
     padding: 0.5em 1em;
     border-radius: 1em;
@@ -372,6 +375,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
   }
   .list a {
     text-decoration: none;
@@ -482,7 +487,6 @@
   #inputEmail {
     display: flex;
     font-size: 1em;
-
   }
   #input_password {
     font-size: 1em;
@@ -522,6 +526,439 @@
   #or {
     margin: 0 auto;
   }
+
+  * {
+    /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  }
+  .chinhSach {
+    width: 70%;
+    margin: 0 auto;
+    padding: 30px 1px;
+    font-size: 1.5em;
+  }
+  .chinhSach h3 {
+    background-color: #ffc0cc;
+    margin-bottom: 20px;
+    padding: 5px;
+  }
+  #showDetail {
+    width: 100%;
+    padding: 0px 50px;
+  }
+  #showDetail #main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 20px 0px;
+  }
+  .cartImg {
+    width: 15%;
+  }
+  .addToCart {
+    width: 40%;
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .moTa {
+    width: 25%;
+  }
+  .addToCart h3 {
+    color: red;
+  }
+  .addToCart .policy {
+    display: flex;
+  }
+  .policy p {
+    margin-left: 10px;
+  }
+  .policy {
+    border: 1px solid #cacaca;
+    padding: 10px;
+  }
+  .info li {
+    list-style: none;
+    border-top: 1px solid #cacaca;
+    font-size: 1.5em;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+  }
+  .info li p {
+    clear: both;
+    width: 40%;
+    float: left;
+    margin: 5px 0;
+  }
+  .info li div {
+    width: 60%;
+    float: left;
+    margin: 5px 0;
+  }
+  .moTa h2 {
+    text-align: center;
+  }
+  .moTa {
+    padding: 5px;
+    border: 1px solid #cacaca;
+    height: fit-content;
+  }
+  .addToCart button {
+    background: -webkit-linear-gradient(
+      top,
+      hsl(35, 100%, 48%),
+      hsl(22, 98%, 55%)
+    );
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .addToCart button:hover {
+    background: -webkit-linear-gradient(
+      top,
+      hsl(35, 100%, 58%),
+      hsl(22, 98%, 65%)
+    );
+  }
+  .addToCart button:disabled {
+    background: #cccccc;
+    cursor: not-allowed;
+  }
+  .addToCart button:active {
+    background: -webkit-linear-gradient(
+      top,
+      hsl(35, 100%, 68%),
+      hsl(22, 98%, 75%)
+    );
+    transform: translateY(2px);
+  }
+  .addToCart button div {
+    display: flex;
+    justify-content: center;
+  }
+  #recomment {
+    margin-top: 50px;
+    padding: 0px 50px;
+  }
+
+  .khungSanPham {
+    width: 100%;
+    margin: 50px 0;
+    border-radius: 5px;
+    border: 2px solid #434aa8;
+    box-sizing: border-box;
+  }
+  .khungSanPham h3.tenKhung {
+    line-height: 1.5em;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 auto;
+  }
+  #goiYSP {
+    background-image: linear-gradient(
+      120deg,
+      #434aa8 0%,
+      #ec1f1f 50%,
+      #434aa8 100%
+    );
+    text-align: center;
+    font-size: 2em;
+    border-radius: 1em;
+    color: white;
+    transform: translateY(-0.75em);
+    padding: 10px;
+  }
+  .listRecomment {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 10px;
+    padding: 10px;
+  }
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  #boderIconPerson {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  .toolMember .account {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .toolMember .account span {
+    margin-left: 8px;
+  }
+
+  .cart {
+    display: flex;
+    align-items: center;
+  }
+
+  #cart {
+    padding: 7px 50px;
+    margin-bottom: 60px;
+  }
+  .cartContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  .thongTinThanhToan {
+    width: 30%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  .thongTinThanhToan label {
+    display: block;
+    font-size: 1.2em;
+  }
+  .thongTinThanhToan input {
+    padding: 5px;
+  }
+  .listInCart {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  th,
+  td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: hsl(121, 90%, 80%);
+  }
+  table button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+  }
+  #btnThanhToan {
+    padding: 5px 10px;
+    border: none;
+    background-color: hsl(122, 39%, 49%);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #btnThanhToan:hover {
+    background-color: hsl(122, 39%, 60%);
+  }
+  #delAll {
+    padding: 5px 10px;
+    border: none;
+    background-color: hsl(0, 100%, 65%);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #delAll:hover {
+    background-color: hsl(0, 100%, 80%);
+  }
+  #hasItem {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #hasItem p {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #hasItem button {
+    padding: 5px 10px;
+    border: none;
+    background-color: hsla(200, 100%, 74%, 0.843);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #hasItem button:hover {
+    background-color: hsla(200, 100%, 84%, 0.843);
+  }
+
+  #isLogged {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #isLogged p {
+    text-align: center;
+    font-size: 1.5em;
+  }
+  #isLogged button {
+    padding: 5px 10px;
+    border: none;
+    background-color: hsla(200, 100%, 74%, 0.843);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #isLogged button:hover {
+    background-color: hsla(200, 100%, 84%, 0.843);
+  }
+  .profile-container {
+    margin: 60px 50px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+  }
+  .profile-container h1 {
+    text-align: center;
+    font-size: 2em;
+  }
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 1.5em;
+    width: 60%;
+    margin: 0 auto;
+  }
+  .info-item span {
+    float: inline-end;
+  }
+  .info-item {
+    border-bottom: 1px solid #ccc;
+  }
+  #edit {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: hsl(200, 100%, 74%);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #edit:hover {
+    background-color: hsla(200, 100%, 84%, 0.906);
+  }
+
+  .profile-actions {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+  }
+
+  #save {
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: hsla(130, 100%, 74%, 0.885);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #save:hover {
+    background-color: hsla(130, 100%, 84%, 0.906);
+  }
+  #cancel {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 5px 10px;
+    border: none;
+    background-color: hsl(0, 100%, 65%);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  #cancel:hover {
+    background-color: hsla(0, 100%, 80%, 0.906);
+  }
+  .inpEdit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .info-item input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  #item .img {
+    width: 250px;
+    height: 300px;
+  }
+  #regis {
+    width: 40%;
+    margin: 0 auto;
+    gap: 15px;
+    padding: 20px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    position: relative;
+    top: 50px;
+  }
+  #regis input {
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+  }
+  .labelRegis {
+    margin-top: 10px;
+  }
+  #regis button {
+    width: 100%;
+    height: 40px;
+    background-color: hsl(116, 91%, 46%);
+    color: #ffffff;
+    text-align: center;
+    font-size: large;
+    border: none;
+    margin-top: 10px;
+  }
+  #regis button:hover {
+    background-color: hsl(116, 91%, 56%);
+  }
+  #regis button:active {
+    background-color: hsl(116, 91%, 66%);
+  }
 }
 
 #sticky {
@@ -529,4 +966,54 @@
   top: 0;
   width: 100%;
   z-index: 1000;
+}
+@media (max-width: 768px) {
+  .nonFixHeader {
+    display: none;
+  }
+  .listRecomment {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+}
+@media (max-width: 1300px) {
+  .product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  #loginForm {
+    width: 80%;
+  }
+  #regis{
+    width: 40%;
+  }
+  .searchHeader {
+    display: none;
+  }
+  .flexSticky {
+    justify-content: space-between;
+  }
+  .listRecomment {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  .cartImg {
+    width: 200px;
+    height: 200px;
+  }
+  .addToCart button {
+    font-size: 1em;
+  }
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
 }

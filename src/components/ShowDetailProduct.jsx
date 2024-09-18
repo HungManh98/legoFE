@@ -107,7 +107,7 @@ const ShowDetailProduct = () => {
           <ul className="info">
             <li>
               <p>Thông tin</p>
-              <div>Bia Budweiser</div>
+              <div>{data.category}</div>
             </li>
             <li>
               <p>Xuất xứ</p>

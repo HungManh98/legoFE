@@ -58,10 +58,10 @@ const FormRegis = () => {
   };
 
   return (
-    <div>
+    <div id="regis">
       <h2>Đăng ký</h2>
       <form onSubmit={handleRegister}>
-        <div>
+        <div className="labelRegis" >
           <label>Email:</label>
           <input
             type="email"
@@ -71,7 +71,7 @@ const FormRegis = () => {
             required
           />
         </div>
-        <div>
+        <div className="labelRegis">
           <label>Tên người dùng:</label>
           <input
             type="text"
@@ -81,7 +81,7 @@ const FormRegis = () => {
             required
           />
         </div>
-        <div>
+        <div className="labelRegis">
           <label>Mật khẩu:</label>
           <input
             type="password"
@@ -91,7 +91,7 @@ const FormRegis = () => {
             required
           />
         </div>
-        <div>
+        <div className="labelRegis"> 
           <label>Nhập lại mật khẩu:</label>
           <input
             type="password"
