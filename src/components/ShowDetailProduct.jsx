@@ -4,8 +4,6 @@ import { AppContext } from "../App";
 import { RiVerifiedBadgeLine } from "react-icons/ri";
 import { RiRefund2Fill } from "react-icons/ri";
 import { IoMdAddCircleOutline } from "react-icons/io";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const ShowDetailProduct = () => {
   const [data, setData] = useState({});
@@ -41,7 +39,6 @@ const ShowDetailProduct = () => {
       const cartItems = JSON.parse(localStorage.getItem("cart")) || [];
       cartItems.push(data);
       localStorage.setItem("cart", JSON.stringify(cartItems));
-      toast.success("Sản phẩm đã được thêm vào giỏ hàng.");
 
       setMessage("Sản phẩm đã được thêm vào giỏ hàng thành công!");
       setActionText("Tiếp tục mua hàng");
@@ -50,9 +47,9 @@ const ShowDetailProduct = () => {
 
   const handleAction = () => {
     if (actionText === "Đến trang đăng nhập") {
-      navigate("/login"); 
+      navigate("/login");
     } else if (actionText === "Tiếp tục mua hàng") {
-      navigate("/"); 
+      navigate("/");
     }
   };
 
@@ -89,6 +86,7 @@ const ShowDetailProduct = () => {
             </div>
             <p>Giao trong 1 giờ hoặc nhận tại cửa hàng</p>
           </button>
+
           {message && (
             <div>
               <div className="message">{message}</div>
@@ -112,7 +110,6 @@ const ShowDetailProduct = () => {
           </ul>
         </div>
       </div>
-      <ToastContainer />
     </div>
   );
 };
