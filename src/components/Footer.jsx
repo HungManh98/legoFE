@@ -51,7 +51,7 @@ const Footer = () => {
           <br />
           <div>
             <BsFillTelephoneFill />
-            <span style={{ fontSize: "20px" }}> 0796866688</span>
+            <span style={{ fontSize: "20px" }}> 0793138338</span>
           </div>
           <p>Thứ 2 - Thứ 7: 8:00 - 21:30</p>
           <div id="mail">

@@ -17,7 +17,7 @@ const Recomment = () => {
       toast.warn("Bạn cần đăng nhập trước!", {
         position: toast.TOP_CENTER,
         autoClose: 5000,
-        onClick: () => navigate("/login"), 
+        onClick: () => navigate("/login"),
       });
       return;
     }
@@ -26,16 +26,13 @@ const Recomment = () => {
     cart.push(product);
     localStorage.setItem("cart", JSON.stringify(cart));
     toast.success(
-      `Sản phẩm đã được thêm vào giỏ hàng. Giỏ hàng của bạn sẽ được cập nhật`,
+      `Sản phẩm đã được thêm vào giỏ hàng. F5 để giỏ hàng của bạn được cập nhật`,
       {
         position: toast.TOP_CENTER,
         autoClose: 3000,
       }
     );
 
-    await new Promise((resolve) => setTimeout(resolve, 3000));
-
-    window.location.reload();
   };
 
   return (
