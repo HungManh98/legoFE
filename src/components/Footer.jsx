@@ -11,15 +11,14 @@ const Footer = () => {
       <div className="footerConTent">
         <div className="footer1">
           <div id="logo" style={{ color: "white", fontSize: "20px" }}>
-            <AiOutlineShoppingCart size={60} />
-            <span id="cheap">TT</span>
-            <span>MART</span>
+            <AiOutlineShoppingCart size={60} color="black"/>
+            <span id="cheap">Your Logo</span>
           </div>
           <br />
-          <p>Hộ Kinh Doanh Cửa Hàng Tiện Ích Thủy Tiên</p>
+          <p>Hộ Kinh Doanh Cửa Hàng Tiện Ích </p>
           <br />
           <p>Mã số HKD : 26A8048722 </p>
-          <p>Do Phòng Tài Chính Kế Hoạch TP Thanh Hóa cấp ngày 25/06/2024</p>
+          <p>Do Phòng Tài Chính Kế Hoạch cấp ngày 25/06/2024</p>
         </div>
         <div className="footer2">
           <div>
@@ -51,12 +50,12 @@ const Footer = () => {
           <br />
           <div>
             <BsFillTelephoneFill />
-            <span style={{ fontSize: "20px" }}> 0793138338</span>
+            <span style={{ fontSize: "20px" }}> 0790999998</span>
           </div>
           <p>Thứ 2 - Thứ 7: 8:00 - 21:30</p>
           <div id="mail">
             <IoIosMail size={20} />
-            <span style={{ fontSize: "20px" }}> thuytienmart@gmail.com</span>
+            <span style={{ fontSize: "20px" }}> abcdef@gmail.com</span>
           </div>
         </div>
       </div>
