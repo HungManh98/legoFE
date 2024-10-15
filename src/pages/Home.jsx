@@ -15,8 +15,10 @@ const Home = () => {
         <FixedHeader />
       </div>
       <Navbar />
+      <hr />
       <Banner />
-      <ProductList />
+      <br />
+      <ProductList /> <br />
       <Footer />
       <ScrollTop />
     </div>
