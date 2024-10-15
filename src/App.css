@@ -518,9 +518,7 @@ body {
   color: hsl(60, 92%, 72%);
 }
 .banner {
-  display: flex;
-  justify-content: space-around;
-  margin: 50px 0;
+  margin: 0px 50px;
 }
 
 .banner-item {

@@ -1,13 +1,34 @@
 import React from "react";
-
+import { Carousel } from "antd";
+const contentStyle = {
+  margin: 0,
+  height: "460px",
+  color: "#fff",
+  lineHeight: "160px",
+  textAlign: "center",
+  background: "#364d79",
+};
 const Banner = () => {
+  const onChange = (currentSlide) => {
+    console.log(currentSlide);
+  };
   return (
     <div className="banner">
-      <div className="banner-item sp1">Banner 1</div>
-      <div className="banner-item sp2">Banner 2</div>
-      <div className="banner-item sp3">Banner 3</div>
+      <Carousel autoplay afterChange={onChange}>
+        <div>
+          <h3 style={contentStyle}>1</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>2</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>3</h3>
+        </div>
+        <div>
+          <h3 style={contentStyle}>4</h3>
+        </div>
+      </Carousel>
     </div>
   );
 };
-
 export default Banner;

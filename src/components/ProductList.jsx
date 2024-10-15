@@ -1,11 +1,67 @@
 import React from "react";
+import { Card } from "antd";
+const { Meta } = Card;
 
 const ProductList = () => {
+  const image = "../";
   return (
     <div className="product-list">
-      <div className="product-item sp1">Sản phẩm 1</div>
-      <div className="product-item sp2">Sản phẩm 2</div>
-      <div className="product-item sp3">Sản phẩm 3</div>
+      <Card
+        hoverable
+        style={{
+          width: 240,
+        }}
+        cover={
+          <img
+            alt="example"
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          />
+        }
+      >
+        <Meta title="product name" description="mo ta san pham ... " />
+      </Card>
+      <Card
+        hoverable
+        style={{
+          width: 240,
+        }}
+        cover={
+          <img
+            alt="example"
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          />
+        }
+      >
+        <Meta title="product name" description="mo ta san pham ... " />
+      </Card>
+      <Card
+        hoverable
+        style={{
+          width: 240,
+        }}
+        cover={
+          <img
+            alt="example"
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          />
+        }
+      >
+        <Meta title="product name" description="mo ta san pham ... " />
+      </Card>
+      <Card
+        hoverable
+        style={{
+          width: 240,
+        }}
+        cover={
+          <img
+            alt="example"
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+          />
+        }
+      >
+        <Meta title="product name" description="mo ta san pham ... " />
+      </Card>
     </div>
   );
 };
