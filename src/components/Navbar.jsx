@@ -18,19 +18,19 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Dropdown menu={{ items: menuItems }} trigger={["hover"]}>
-        <span className="dropbar">Danh sach san pham</span>
+        <span className="dropbar">Hàng Mới</span>
       </Dropdown>
       <Dropdown  menu={{ items: menuItems }} trigger={["hover"]}>
-        <span>San Pham 2</span>
+        <span>Sản Phẩm</span>
       </Dropdown>
       <Dropdown menu={{ items: menuItems }} trigger={["hover"]}>
-        <span>San Pham 3</span>
+        <span>Khuyễn Mãi</span>
       </Dropdown>
       <Dropdown menu={{ items: menuItems }} trigger={["hover"]}>
-        <span>Danh sach san pham</span>
+        <span>Chương Trình Thành Viên</span>
       </Dropdown>
       <Dropdown menu={{ items: menuItems }} trigger={["hover"]}>
-        <span>Danh sach san pham</span>
+        <span>Cẩm Nang</span>
       </Dropdown>
     </div>
   );
