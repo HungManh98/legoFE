@@ -5,8 +5,8 @@ const Header = () => {
     <>
       <div className="nonFixHeader">
         <span>
-          MIỄN PHÍ giao hàng tận nhà cho đơn hàng hơn 500.000 đ Mở cửa: 6h sáng
-          - 11h tối
+          MIỄN PHÍ giao hàng tận nơi cho đơn hàng hơn 500.000 đ Mở cửa: 8h sáng
+          - 10h tối
         </span>
         
       </div>
