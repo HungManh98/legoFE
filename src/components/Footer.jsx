@@ -15,7 +15,7 @@ const Footer = () => {
             <span id="cheap">Your Logo</span>
           </div>
           <br />
-          <p>Hộ Kinh Doanh Cửa Hàng Tiện Ích </p>
+          <p>Hộ Kinh Doanh Cửa Hàng Đồ Chơi Lego </p>
           <br />
           <p>Mã số HKD : 26A8048722 </p>
           <p>Do Phòng Tài Chính Kế Hoạch cấp ngày 25/06/2024</p>
@@ -24,10 +24,10 @@ const Footer = () => {
           <div>
             <CiLocationOn size={25} />
             <span>
-              136 Phạm Vấn, Phường Đông Vệ, Thành phố Thanh Hóa, Việt Nam
+              18 Tam Trinh, Mai Động, Hai Bà Trưng, Việt Nam
             </span>
             <br />
-            Thứ 2 - Chủ nhật: 6:00-20:00
+            Thứ 2 - Chủ nhật: 08:00-20:00
           </div>
         </div>
         <div className="footer3">
