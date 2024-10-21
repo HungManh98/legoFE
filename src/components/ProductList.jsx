@@ -8,7 +8,7 @@ const ProductList = () => {
   return (
     <>
       <div className="product-new">
-        <h2>Hàng Mới</h2>
+        <h2>Lego Technic</h2>
         <div className="product-list">
           <Card
             hoverable
