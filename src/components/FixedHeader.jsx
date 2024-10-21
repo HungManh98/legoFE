@@ -46,12 +46,12 @@ const FixedHeader = () => {
   const menuItem2 = [
     {
       key: "login",
-      label: "Dang Nhap",
+      label: "Đăng nhập",
       onClick: () => navigate("/login"),
     },
     {
       key: "register",
-      label: "Đăng Ki",
+      label: "Đăng Ký",
       onClick: () => navigate("/register"),
     },
   ];
