@@ -18,7 +18,7 @@ const Footer = () => {
           <p>Hộ Kinh Doanh Cửa Hàng Đồ Chơi Lego </p>
           <br />
           <p>Mã số HKD : 26A8048722 </p>
-          <p>Do Phòng Tài Chính Kế Hoạch cấp ngày 25/06/2024</p>
+          <p>Do Phòng Tài Chính Kế Hoạch cấp ngày 19/08/2024</p>
         </div>
         <div className="footer2">
           <div>
