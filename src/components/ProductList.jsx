@@ -22,7 +22,7 @@ const ProductList = () => {
               />
             }
           >
-            <Meta title="product name" description="mo ta san pham ... " />
+            <Meta title="Siêu xe Lambogini Cyberpunk4" description="mo ta san pham ... " />
           </Card>
           <Card
             hoverable
@@ -36,7 +36,7 @@ const ProductList = () => {
               />
             }
           >
-            <Meta title="product name" description="mo ta san pham ... " />
+            <Meta title="Siêu xe Lambogini Sian" description="mo ta san pham ... " />
           </Card>
           <Card
             hoverable
@@ -50,7 +50,7 @@ const ProductList = () => {
               />
             }
           >
-            <Meta title="product name" description="mo ta san pham ... " />
+            <Meta title="Siêu xe F1 AMG F1 W14 E Performance " description="mo ta san pham ... " />
           </Card>
           <Card
             hoverable
@@ -64,7 +64,7 @@ const ProductList = () => {
               />
             }
           >
-            <Meta title="product name" description="mo ta san pham ... " />
+            <Meta title="Siêu xe Porche CayMan" description="mo ta san pham ... " />
           </Card>
         </div>
         <div className="btn">
