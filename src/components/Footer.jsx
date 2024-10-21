@@ -24,7 +24,7 @@ const Footer = () => {
           <div>
             <CiLocationOn size={25} />
             <span>
-              18 Tam Trinh, Mai Động, Hai Bà Trưng, Việt Nam
+              18 Tam Trinh, Minh Khai, Hai Bà Trưng, Việt Nam
             </span>
             <br />
             Thứ 2 - Chủ nhật: 08:00-20:00
