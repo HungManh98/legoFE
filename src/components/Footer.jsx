@@ -50,12 +50,12 @@ const Footer = () => {
           <br />
           <div>
             <BsFillTelephoneFill />
-            <span style={{ fontSize: "20px" }}> 0790999998</span>
+            <span style={{ fontSize: "20px" }}> 0965430600</span>
           </div>
-          <p>Thứ 2 - Thứ 7: 8:00 - 21:30</p>
+          <p>Thứ 2 - Thứ 7: 8:00 - 22:00</p>
           <div id="mail">
             <IoIosMail size={20} />
-            <span style={{ fontSize: "20px" }}> abcdef@gmail.com</span>
+            <span style={{ fontSize: "20px" }}> nguyenhungmanh90ss@gmail.com</span>
           </div>
         </div>
       </div>
