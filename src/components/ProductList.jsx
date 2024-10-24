@@ -18,7 +18,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -32,7 +32,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -46,7 +46,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -60,7 +60,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -84,7 +84,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -98,7 +98,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -112,7 +112,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -126,7 +126,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -150,7 +150,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -164,7 +164,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -178,7 +178,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
@@ -192,7 +192,7 @@ const ProductList = () => {
             cover={
               <img
                 alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+                src="/images/img-item.png"
               />
             }
           >
