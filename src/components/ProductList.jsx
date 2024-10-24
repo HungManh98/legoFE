@@ -15,12 +15,7 @@ const ProductList = () => {
             style={{
               width: 240,
             }}
-            cover={
-              <img
-                alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-              />
-            }
+            cover={<img alt="example" src="/images/img-item.png" />}
           >
             <Meta title="product name" description="mo ta san pham ... " />
           </Card>
@@ -29,12 +24,7 @@ const ProductList = () => {
             style={{
               width: 240,
             }}
-            cover={
-              <img
-                alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-              />
-            }
+            cover={<img alt="example" src="/images/img-item.png" />}
           >
             <Meta title="product name" description="mo ta san pham ... " />
           </Card>
@@ -43,12 +33,7 @@ const ProductList = () => {
             style={{
               width: 240,
             }}
-            cover={
-              <img
-                alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-              />
-            }
+            cover={<img alt="example" src="/images/img-item.png" />}
           >
             <Meta title="product name" description="mo ta san pham ... " />
           </Card>
@@ -57,12 +42,7 @@ const ProductList = () => {
             style={{
               width: 240,
             }}
-            cover={
-              <img
-                alt="example"
-                src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-              />
-            }
+            cover={<img alt="example" src="/images/img-item.png" />}
           >
             <Meta title="product name" description="mo ta san pham ... " />
           </Card>
